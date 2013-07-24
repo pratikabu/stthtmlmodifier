@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<project name="HtmlModifier" default="build">
+<project name="HtmlModifier" default="buildJarToSTT">
 	<property name="buildFileName" value="htmlModifier-1.0.jar" />
 	<property name="mainClass" value="com.pratikabu.scrolltotop.utils.HtmlModifierDispatcher" />
 	
