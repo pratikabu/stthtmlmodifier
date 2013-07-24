@@ -16,5 +16,12 @@
 	<target name="clean">
 		<delete file="${buildFileName}" />
 	</target>
+	
+	<target name="buildJarToSTT" depends="clean,build">
+		<copy overwrite="true" todir="../scrolltotop/ants">
+			<fileset file="${buildFileName}" />
+		</copy>
+		<antcall target="clean" />
+	</target>
 
 </project>
