@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<project name="HtmlModifier" default="build">
+	<property name="buildFileName" value="htmlModifier-1.0.jar" />
+	<property name="mainClass" value="com.pratikabu.scrolltotop.utils.HtmlModifierDispatcher" />
+	
+	<target name="build" description="generate executable jar">
+		<jar destfile="${buildFileName}">
+			<fileset dir="bin" />
+			<manifest>
+				<attribute name="Main-Class" value="${mainClass}"/>
+			</manifest>
+		</jar>
+	</target>
+	
+	<target name="clean">
+		<delete file="${buildFileName}" />
+	</target>
+
+</project>
