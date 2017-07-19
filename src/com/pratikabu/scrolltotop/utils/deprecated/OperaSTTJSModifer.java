@@ -1,4 +1,4 @@
-package com.pratikabu.scrolltotop.utils;
+package com.pratikabu.scrolltotop.utils.deprecated;
 
 import java.io.BufferedReader;
 import java.io.File;

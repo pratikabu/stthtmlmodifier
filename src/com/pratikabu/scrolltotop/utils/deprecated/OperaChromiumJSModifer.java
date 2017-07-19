@@ -1,4 +1,4 @@
-package com.pratikabu.scrolltotop.utils;
+package com.pratikabu.scrolltotop.utils.deprecated;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -7,10 +7,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
-public class FirefoxHtmlModifier {
-	
-	public static void processHtml(String srcFilePath, String destFilePath) throws IOException {
-		System.out.println("Removing script tags from " + srcFilePath);
+public class OperaChromiumJSModifer {
+
+	public static void processJS(String srcFilePath, String destFilePath) throws IOException {
+		System.out.println("Updating the addon review link in " + srcFilePath);
 		
 		File destFile = new File(destFilePath);
 		destFile.createNewFile();
@@ -19,8 +19,10 @@ public class FirefoxHtmlModifier {
 		PrintWriter pw = new PrintWriter(destFile);
 		String line;
 		while (null != (line = br.readLine())) {
-			if(line.trim().startsWith("<script ")) {
-				continue;// skip writing the line
+			if(line.trim().contains("chrome.google.com")) {
+				// update the addon link
+				pw.println("\treturn \"http://addons.opera.com/en/extensions/details/scroll-to-top\";");
+				continue;
 			}
 			pw.println(line);
 		}
@@ -28,4 +30,5 @@ public class FirefoxHtmlModifier {
 		br.close();
 		pw.close();
 	}
+
 }
