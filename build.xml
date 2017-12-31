@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <project name="HtmlModifier" default="buildJarToSTT">
-	<property name="buildFileName" value="htmlModifier-2.0.jar" />
+	<property name="buildFileName" value="htmlModifier-2.1.jar" />
 	<property name="mainClass" value="com.pratikabu.scrolltotop.utils.HtmlModifierDispatcher" />
 	
 	<target name="build" description="generate executable jar">
